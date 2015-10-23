@@ -1,0 +1,54 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px; }
+
+p {
+  margin: .1em 0; }
+
+.footer {
+  height: 30px;
+  background: #30383b; }
+  .footer .copyrights {
+    color: #fff;
+    font-style: italic;
+    float: right;
+    margin: 5px 20px; }
+
+.header {
+  height: 80px;
+  border: 1px solid #eee;
+  overflow: hidden; }
+  .header .brand-logo {
+    width: 100%;
+    height: 55px;
+    background: url(../images/logo.svg) no-repeat;
+    margin: 15px 0 0 30px; }
+  .header .description {
+    color: #30383b;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0.75em;
+    text-align: center; }
+
+@media screen and (max-width: 600px) {
+  .header .brand-logo {
+    margin-left: 10px; }
+  .header .description {
+    font-size: 1.5em;
+    margin: 1em; } }
+
+.main {
+  background: #f4f5f5;
+  border-bottom: 1px solid #eee;
+  color: #7d7d7d; }
+  .main h3 {
+    color: #30383b; }
+  .main .form-container {
+    text-align: left; }
+  .main .block {
+    text-align: center;
+    padding: 0 10px; }
+
+@media screen and (min-width: 960px) {
+  .main {
+    min-height: 100%; } }

@@ -1,0 +1,35 @@
+@import "variables";
+
+.header {
+  height: 80px;
+  border:1px solid $border-color;
+  overflow: hidden;
+
+  .brand-logo {
+    width: 100%;
+    height: 55px;
+    background: url(../images/logo.svg) no-repeat;
+    margin: 15px 0 0 30px;
+  }
+
+  .description {
+    color: $header-font-color;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0.75em;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .header {
+    .brand-logo {
+      margin-left: 10px;
+    }
+
+    .description {
+      font-size: 1.5em;
+      margin: 1em
+    }
+  }
+}

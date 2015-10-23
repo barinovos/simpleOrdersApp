@@ -1,0 +1,13 @@
+@import "variables";
+
+.footer {
+  height: 30px;
+  background: $footer-background-color;
+
+  .copyrights {
+    color: #fff;
+    font-style: italic;
+    float: right;
+    margin: 5px 20px;
+  }
+}

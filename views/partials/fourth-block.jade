@@ -1,0 +1,7 @@
+h3.md-title List orders (desc.)
+md-button.md-raised(ng-click="vm.getPopularOrders()") Show orders
+md-list
+    md-subheader(ng-show="vm.sortedOrders.length") Popular Items:
+    md-list-item(ng-repeat="item in vm.sortedOrders")
+        .md-list-item-text
+            p {{item.name}} {{item.count}}

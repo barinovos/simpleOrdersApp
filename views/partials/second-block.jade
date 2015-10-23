@@ -1,0 +1,15 @@
+h3.md-title Search by address
+form(name="ordersByAddress")
+    md-input-container.form-container
+        label Customer Address
+        input(name="customerAddress", ng-model="vm.customerAddress", required, placeholder="Type here...")
+        div(ng-messages="ordersByAddress.customerAddress.$error",
+        ng-show="ordersByAddress.customerAddress.$invalid && ordersByAddress.customerAddress.$dirty")
+            div(ng-message="required") This is required!
+    md-button.md-primary.md-raised(ng-click="vm.getOrdersByAddress()") Get orders
+md-list
+    md-subheader.md-no-sticky(ng-show="vm.ordersByAddress.length") Items ordered from address {{vm.customerAddress}}:
+    md-subheader.md-no-sticky(ng-show="!vm.ordersByAddress.length && vm.ordersWasSearched_address") No items found
+    md-list-item(ng-repeat="order in vm.ordersByAddress track by $index")
+        .md-list-item-text
+            p {{order.orderedItem}}

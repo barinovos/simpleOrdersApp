@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    md-content.main.md-primary(layout="column", layout-gt-md="row", layout-padding)
+        .block(flex)
+            include ./partials/first-block
+        .block(flex)
+            include ./partials/second-block
+        .block(flex)
+            include ./partials/third-block
+        .block(flex)
+            include ./partials/fourth-block

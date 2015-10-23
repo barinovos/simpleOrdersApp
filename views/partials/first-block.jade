@@ -1,0 +1,15 @@
+h3.md-title Search by name
+form(name="ordersByCompany")
+    md-input-container.form-container
+        label Company Name
+        input(name="companyName", ng-model="vm.companyName", required, placeholder="Type here...")
+        div(ng-messages="ordersByCompany.companyName.$error",
+        ng-show="ordersByCompany.companyName.$invalid && ordersByCompany.companyName.$dirty")
+            div(ng-message="required") This is required!
+    md-button.md-primary.md-raised(ng-click="vm.getOrdersByCompany()") Get orders
+md-list
+    md-subheader.md-no-sticky(ng-show="vm.ordersByCompany.length") Items ordered by {{vm.companyName}}:
+    md-subheader.md-no-sticky(ng-show="!vm.ordersByCompany.length && vm.ordersWasSearched_name") No items found
+    md-list-item(ng-repeat="order in vm.ordersByCompany track by $index")
+        .md-list-item-text
+            p {{order.orderedItem}}

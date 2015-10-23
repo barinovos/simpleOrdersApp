@@ -1,0 +1,10 @@
+h3.md-title Delete order
+form(name="deleteOrder")
+    md-input-container.form-container
+        label Order Id
+        input(name="orderId", ng-model="vm.orderId", required, placeholder="Type id here...")
+        div(ng-messages="deleteOrder.orderId.$error",
+        ng-show="deleteOrder.orderId.$invalid && deleteOrder.orderId.$dirty")
+            div(ng-message="required") This is required!
+    md-button.md-warn.md-raised(ng-click="vm.showDeleteConfirm($event)") Delete Order
+.md-headline(ng-show="vm.itemDeleted") Order successfully deleted!

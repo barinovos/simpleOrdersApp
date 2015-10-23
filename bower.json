@@ -1,0 +1,29 @@
+{
+  "name": "borderGuruTest",
+  "version": "0.1.0",
+  "authors": [
+    "Barinov Oleg <barinovos@gmail.com>"
+  ],
+  "description": "test task for BorderGuru Gmbh.",
+  "main": "",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.7",
+    "jquery": "~2.1.4",
+    "angular-material": "master",
+    "lodash": "~3.10.1"
+  }
+}

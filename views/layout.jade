@@ -1,0 +1,21 @@
+doctype html
+html(ng-app="bgApp")
+  head
+    title= title
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,400italic')
+    link(rel='stylesheet', href='/bower_components/angular-material/angular-material.css')
+    link(rel='stylesheet', href='/bower_components/angular-material/angular-material.layouts.css')
+    link(rel='stylesheet', href='/css/main.css')
+  body(ng-controller="appController as vm")
+    include ./partials/header
+    block content
+    include ./partials/footer
+    script(src="/bower_components/jquery/dist/jquery.min.js")
+    script(src="/bower_components/lodash/lodash.min.js")
+    script(src="/bower_components/angular/angular.min.js")
+    script(src="/bower_components/angular-animate/angular-animate.min.js")
+    script(src="/bower_components/angular-aria/angular-aria.min.js")
+    script(src="/bower_components/angular-material/angular-material.min.js")
+    script(src="/app/app.js")
+    script(src="/app/services/restService.js")
+    script(src="/app/controller/main.js")
